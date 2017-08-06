@@ -51,6 +51,7 @@
 		ABB8EC171F378BDC001C8EAC /* ApplePayDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ApplePayDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB8EC1B1F378BDC001C8EAC /* ApplePayDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplePayDemoUITests.m; sourceTree = "<group>"; };
 		ABB8EC1D1F378BDC001C8EAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABB8EC291F378BF3001C8EAC /* ApplePayDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ApplePayDemo.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +102,7 @@
 		ABB8EBF51F378BDC001C8EAC /* ApplePayDemo */ = {
 			isa = PBXGroup;
 			children = (
+				ABB8EC291F378BF3001C8EAC /* ApplePayDemo.entitlements */,
 				ABB8EBF91F378BDC001C8EAC /* AppDelegate.h */,
 				ABB8EBFA1F378BDC001C8EAC /* AppDelegate.m */,
 				ABB8EBFC1F378BDC001C8EAC /* ViewController.h */,
@@ -209,6 +211,11 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 8G4B9H2TZU;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplePay = {
+								enabled = 1;
+							};
+						};
 					};
 					ABB8EC0B1F378BDC001C8EAC = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -427,6 +434,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ApplePayDemo/ApplePayDemo.entitlements;
 				DEVELOPMENT_TEAM = 8G4B9H2TZU;
 				INFOPLIST_FILE = ApplePayDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -439,6 +447,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ApplePayDemo/ApplePayDemo.entitlements;
 				DEVELOPMENT_TEAM = 8G4B9H2TZU;
 				INFOPLIST_FILE = ApplePayDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
